@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% load static %}
+<!-- load wagtailcore_tags by adding this: -->
+{% load wagtailcore_tags %} <!--this one is for page.body|richtext-->
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+    {{ page.body|richtext }}
+{% endblock %}
