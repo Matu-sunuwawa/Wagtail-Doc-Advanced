@@ -79,9 +79,40 @@ python manage.py startapp blog
 * Resume: This is a document that provides a summary of your education, work experience, achievements, and qualifications.
 
 `hero_cta_link` is a ForeignKey to `wagtailcore.Page`. The `wagtailcore.Page` is the base class for all other page types in Wagtail. 
-This means all Wagtail pages inherit from wagtailcore.Page. For instance, your class HomePage(Page) inherits from wagtailcore.Page.
+This means all Wagtail pages inherit from wagtailcore.Page. For instance, your class `HomePage(Page)` inherits from `wagtailcore.Page`.
+
+## Create a footer for all pages
+
+```
+python manage.py startapp base
+```
+
+### Create navigation settings
+* base/models.py
+* Add your social media links
+* Display social media links
+* Create editable footer text with Wagtail Snippets
+* Add footer text
+* Display your footer text
 
 
+```
+...
+from wagtail.contrib.settings.models import (
+    BaseGenericSetting,
+    register_setting,
+)
+
+@register_setting
+class NavigationSettings(BaseGenericSetting):
+...
+
+```
+* The `wagtail.contrib.settings` module defines models that `hold common settings across all your web pages`.
+* install the wagtail.contrib.settings module by adding "wagtail.contrib.settings" to the INSTALLED_APPS list
+  to successfully import the `BaseGenericSetting` and `register_setting`.
+
+### You now have a footer across all pages of your portfolio site
 
 
 
