@@ -129,6 +129,19 @@ You can add any top-level, like your Home page, Blog index page, Portfolio page,
 * Check the Show in menus checkbox.
 
 
+## Style and improve user experience
++ navigate to your `mysite/static/css/mysite.css`
 
+Note:
++ If your webpage’s styles `do not` update after reloading, then you may need to clear your browser cache.
 
+modifying your `mysite/templates/base.html`
++ removed wagtailuserbar: This change improves the user experience for <mark>keyboard and screen reader users</mark>.
++ Added <meta name="color-scheme" content="light dark">: This makes your site adapt to both dark and light themes.
++ used the <link> tag to add a favicon
++ wrapped the {% block content %} and {% endblock %} tags with a <main> HTML5 tag.
 
+modify `mysite/templates/includes/header.html`
+modify `mysite/static/css/mysite.css`
+modify `mysite/templates/base.html`
+modify `mysite/templates/includes/header.html`

@@ -1,4 +1,5 @@
-{% load static wagtailcore_tags wagtailuserbar %}
+{% comment %} {% load static wagtailcore_tags wagtailuserbar %} {% endcomment %}
+{% load static wagtailcore_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +24,12 @@
         <base target="_blank">
         {% endif %}
 
+        <!-- to inform the browser about the supported color schemes for your site. This makes your site adapt to both dark and light themes. -->
+        <meta name="color-scheme" content="light dark">
+
+        <!--  add a favicon to your portfolio site using inline SVG. -->
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍩</text></svg>"/>
+
         {# Global stylesheets #}
         <link rel="stylesheet" type="text/css" href="{% static 'css/mysite.css' %}">
 
@@ -32,12 +39,15 @@
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
-        {% wagtailuserbar %}
+        {% comment %} {% wagtailuserbar %} {% endcomment %}
 
         {# Add your header template to your base template: #}
         {% include "includes/header.html" %}
 
-        {% block content %}{% endblock %}
+        <main id="main">
+            {% block content %}{% endblock %}
+        </main>
+
 
         {% include "includes/footer.html" %}
 
