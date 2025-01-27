@@ -154,3 +154,27 @@ modify `mysite/templates/includes/header.html`
 
 ### Style your contact page
 + modify `mysite/static/css/mysite.css` file:
+
+
+## Create a portfolio page
++ A portfolio page is a web page that has your resume or Curriculum Vitae (CV).
+<mark>StreamField is a feature that was created to balance the need for developers to have well-structured data</mark>
+
+### Create reusable custom blocks
++ create a `base/blocks.py`
++ create a `base/templates/base/blocks/captioned_image_block.html`
++ create a `base/templates/base/blocks/heading_block.html`
+
+### Use the blocks you created in your portfolio app
++ create a `portfolio/blocks.py`
++ modify `portfolio/models.py`
++ create a `portfolio/templates/portfolio/portfolio_page.html`
+
+### Add more custom blocks
++ modify your `portfolio/blocks.py`
++ create a `portfolio/templates/portfolio/blocks/card_block.html`
++ create a `portfolio/templates/portfolio/blocks/featured_posts_block.html`
+
+### Add your resume
+
+Congratulations! 🎉 You now understand how to create complex flexible layouts with Wagtail StreamField.
