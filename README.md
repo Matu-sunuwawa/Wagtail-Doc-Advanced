@@ -62,13 +62,24 @@ python manage.py startapp blog
 ### Parents and children
 * Much of the work in Wagtail revolves around the concept of hierarchical tree structures consisting of nodes and leaves.
 
-#Overriding Context
+### Overriding Context
 * Posts are in chronological order. Generally blogs display content in reverse chronological order.
 * Posts drafts are visible. You want to make sure that it displays only published content.
   To accomplish these, you need to do more than grab the index page’s children in the template. Instead, you want to modify the QuerySet in the model definition
 
 
 
+## Customize your home page
+
+### homepage should include the following features:
+* Introduction: A concise introduction captures visitors’ attention.
+* Biography: Include a brief biography that introduces yourself. This section should mention your name, role, expertise, and unique qualities.
+* Hero Image: This may be a professional headshot or other image that showcases your work and adds visual appeal.
+* Call to Action (CTA): Incorporate a CTA that guides visitors to take a specific action, such as “View Portfolio,” “Hire Me,” or “Learn More”.
+* Resume: This is a document that provides a summary of your education, work experience, achievements, and qualifications.
+
+`hero_cta_link` is a ForeignKey to `wagtailcore.Page`. The `wagtailcore.Page` is the base class for all other page types in Wagtail. 
+This means all Wagtail pages inherit from wagtailcore.Page. For instance, your class HomePage(Page) inherits from wagtailcore.Page.
 
 
 
