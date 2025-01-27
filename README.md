@@ -112,10 +112,21 @@ class NavigationSettings(BaseGenericSetting):
 * install the wagtail.contrib.settings module by adding "wagtail.contrib.settings" to the INSTALLED_APPS list
   to successfully import the `BaseGenericSetting` and `register_setting`.
 
-### You now have a footer across all pages of your portfolio site
+### 🎉You now have a footer across all pages of your portfolio site
 
 
-
+## Set up site menu for linking to the homepage and other pages
+* base/templatetags/navigation_tags.py ... `from wagtail.models import Site`
+* create mysite/templates/includes/header.html
+* mysite/templates/base.html file:
+  {% include "includes/header.html" %}
+ 
+### Add pages to your site menu
+You can add any top-level, like your Home page, Blog index page, Portfolio page, and Form page to the site menu by doing the following:
+* Go to your admin interface.
+* Go to any top-level page.
+* Click Promote.
+* Check the Show in menus checkbox.
 
 
 
