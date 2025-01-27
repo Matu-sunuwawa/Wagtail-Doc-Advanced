@@ -145,3 +145,12 @@ modify `mysite/templates/includes/header.html`
 modify `mysite/static/css/mysite.css`
 modify `mysite/templates/base.html`
 modify `mysite/templates/includes/header.html`
+
+
+## Create contact page
+* modifying your `base/models.py`
+* create a `base/templates/base/form_page.html`
+* create a base/templates/base/form_page_landing.html
+
+### Style your contact page
++ modify `mysite/static/css/mysite.css` file:
