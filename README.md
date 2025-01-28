@@ -178,3 +178,10 @@ modify `mysite/templates/includes/header.html`
 ### Add your resume
 
 Congratulations! 🎉 You now understand how to create complex flexible layouts with Wagtail StreamField.
+
+
+## Add search to your site
++ customize your search template `search/templates/search.html`
++ modify `mysite/templates/includes/header.html`
+
+🎉Well done! You now have a fully deployable portfolio site
