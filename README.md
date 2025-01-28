@@ -185,3 +185,8 @@ Congratulations! 🎉 You now understand how to create complex flexible layouts 
 + modify `mysite/templates/includes/header.html`
 
 🎉Well done! You now have a fully deployable portfolio site
+
+## Deploy your site
++ To deploy your site, you’ll first need to choose a hosting provider, then follow their Wagtail deployment guide.
++ https://docs.wagtail.org/en/stable/deployment/index.html#deployment-guide
+🎉COngrats
