@@ -47,13 +47,7 @@ class NavigationSettings(BaseGenericSetting): # BaseGenericSetting used to defin
 
 # add other items, like site credits and copyright notices, to your footer.
 @register_snippet
-class FooterText(
-    DraftStateMixin,
-    RevisionMixin,
-    PreviewableMixin,
-    TranslatableMixin,
-    models.Model,
-):
+class FooterText(DraftStateMixin,RevisionMixin,PreviewableMixin,TranslatableMixin,models.Model):
     
     body = RichTextField()
 
@@ -79,6 +73,7 @@ class FooterText(
 
 #  FormField model inherits from AbstractFormField ... AbstractEmailForm offers a form-to-email capability
 class FormField(AbstractFormField):
+    # defines a parent-child relationship between the 'FormField' and 'FormPage models'.
     page = ParentalKey('FormPage', on_delete=models.CASCADE, related_name='form_fields')
 
 

@@ -12,6 +12,8 @@
         <h1>{{ page.title }}</h1>
         {% image page.image fill-480x320 %}
         <p>{{ page.hero_text }}</p>
+        <!-- the 'firstof' template tag displays page.hero_cta if it has a value. 
+        If page.hero_cta doesn’t have a value, then it displays page.hero_cta_link.title. -->
         {% if page.hero_cta_link %}
             <a href="{% pageurl page.hero_cta_link %}">
                 {% firstof page.hero_cta page.hero_cta_link.title %}
