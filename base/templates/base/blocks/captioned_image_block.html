@@ -1,6 +1,7 @@
 {% load wagtailimages_tags %}
 
 <figure>
+    <!-- 'lazy' Don’t load this image until the user scrolls down and it’s actually visible. -->
     {% image self.image fill-600x338 loading="lazy" %}
     <figcaption>{{ self.caption }} - {{ self.attribution }}</figcaption>
 </figure>
