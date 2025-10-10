@@ -14,7 +14,7 @@ from taggit.models import TaggedItemBase
 # Add these:
 from wagtail.models import Page, Orderable
 from wagtail.fields import RichTextField
-from wagtail.admin.panels import FieldPanel, InlinePanel, MultiFieldPanel 
+from wagtail.admin.panels import FieldPanel, InlinePanel, MultiFieldPanel
 
 # import `index`` as this makes the model searchable
 from wagtail.search import index
